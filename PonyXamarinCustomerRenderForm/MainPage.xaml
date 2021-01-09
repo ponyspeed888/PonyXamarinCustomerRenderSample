@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PonyXamarinCustomerRenderForm"
+             xmlns:vm="clr-namespace:PonyXamarinCustomerRenderForm.ViewModel"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+                xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+
+             
+             x:Class="PonyXamarinCustomerRenderForm.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:FileSaverViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="custom render" x:Name="Test1" Clicked="Test1_Clicked"  />
+        <ToolbarItem Text="Test2" x:Name="Test"  />
+    </ContentPage.ToolbarItems>
+
+    
+    <StackLayout>
+
+        <dataForm:SfDataForm x:Name="dataForm" WidthRequest="300" HeightRequest="200"  BackgroundColor="Aquamarine"/>
+
+
+
+    </StackLayout>
+
+</ContentPage>
