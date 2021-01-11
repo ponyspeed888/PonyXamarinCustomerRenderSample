@@ -9,14 +9,9 @@
              
              x:Class="PonyXamarinCustomerRenderForm.MainPage">
 
-    <ContentPage.BindingContext>
-        <vm:FileSaverViewModel />
-    </ContentPage.BindingContext>
-
-
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="custom render" x:Name="Test1" Clicked="Test1_Clicked"  />
-        <ToolbarItem Text="Test2" x:Name="Test"  />
+        <ToolbarItem Text="SetObject" x:Name="btnSetObject" Clicked="SetObject_Clicked"  />
+        <ToolbarItem Text="GetObject" x:Name="bntGetObject"  Clicked="bntGetObject_Clicked" />
     </ContentPage.ToolbarItems>
 
     

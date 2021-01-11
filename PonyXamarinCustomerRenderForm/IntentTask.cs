@@ -24,5 +24,7 @@ namespace DeveloperHelperXForm.Models
         [Column(TypeName = "NVARCHAR(128)")]
         public string IntentTaskType { get; set; }
         public override string ToString() { return this.IntentTaskTitle.ToString() ; }
+
+        public IntentTask () { IntentTaskTitle = "sisi"; } 
     }
 }

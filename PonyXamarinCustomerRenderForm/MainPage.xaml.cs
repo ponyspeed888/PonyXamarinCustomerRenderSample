@@ -18,10 +18,9 @@ namespace PonyXamarinCustomerRenderForm
         {
             InitializeComponent();
 
-
         }
 
-        private async void Test1_Clicked(object sender, EventArgs e)
+        private async void SetObject_Clicked(object sender, EventArgs e)
         {
 
             dataForm.DataObject = new IntentTask();
@@ -29,28 +28,20 @@ namespace PonyXamarinCustomerRenderForm
 
         }
 
+        private void bntGetObject_Clicked(object sender, EventArgs e)
+        {
+            // StyleId exist in all View and most of the time is not used, use this as a hint to copy all properties from Control to Element
 
-        //async Task<FileResult> PickAndShow(PickOptions options)
-        //{
-        //    try
-        //    {
-        //        var result = await FilePicker.PickAsync();
-        //        if (result != null)
-        //        {
-        //            Text = $"File Name: {result.FileName}";
-        //            if (result.FileName.EndsWith("jpg", StringComparison.OrdinalIgnoreCase) ||
-        //                result.FileName.EndsWith("png", StringComparison.OrdinalIgnoreCase))
-        //            {
-        //                var stream = await result.OpenReadAsync();
-        //                Image = ImageSource.FromStream(() => stream);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // The user canceled or something went wrong
-        //    }
-        //}
+            //dataForm.StyleId = "sis";
+
+            IntentTask tsk = dataForm.DataObject as IntentTask;
+            if (tsk.IntentTaskTitle == null )
+                App.Current.MainPage.DisplayAlert("don care in wpf" , "Please set title property", "OK");
+            else
+                App.Current.MainPage.DisplayAlert(tsk.IntentTaskTitle, tsk.IntentTaskTitle, "OK");
+        }
+
+
 
 
 
